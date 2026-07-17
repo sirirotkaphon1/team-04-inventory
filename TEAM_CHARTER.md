@@ -7,6 +7,7 @@
 |  นาย ศิริโรจน์  กาพล  | sirirotkaphon1 | Product Owner |
 |  นาย สรวิชญ์ มีมาก | sorawitmm-sudo | Scrum Master / Developer |
 | นาย ปฏิพัทธ์ บัวแสง  | Patipat-t | Developer |
+| นางสาว ชลธิชา สุท้าว  | --- | Developer |
 
 ## Branching Strategy
 
