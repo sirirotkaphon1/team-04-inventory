@@ -23,8 +23,18 @@ def update_stock(item_id, change_quantity):
     else:
         print("Error: ไม่พบรหัสสินค้านี้ในระบบ")
         return False
+# --- ฟังก์ชันเพิ่มสินค้าใหม่ (US-02) ---
+def add_item(item_id, name, quantity):
+    if quantity < 0:
+        return False, "จำนวนสินค้าต้องเป็น 0 หรือมากกว่า"
 
-# ตัวอย่างการทดสอบใช้งาน
-if __name__ == "__main__":
-    update_stock("item_001", 5)   # รับเข้า 5 ชิ้น
-    update_stock("item_002", -3)  # จ่ายออก 3 ชิ้น
+    # AC-2: ตรวจสอบรหัสสินค้าซ้ำ
+    if item_id in inventory:
+        return False, "รหัสสินค้าซ้ำ"
+
+    # AC-1: บันทึกสินค้าใหม่
+    inventory[item_id] = {
+        "name": name,
+        "quantity": quantity
+    }
+    return True, "บันทึกสินค้าสำเร็จ"
